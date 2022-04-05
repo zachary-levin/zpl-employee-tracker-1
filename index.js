@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const ctable = require('console.table');
+const cTable = require('console.table');
 const mysql = require('mysql2');
 const connection = mysql.createConnection({ 
     host: 'localhost',
@@ -11,6 +11,82 @@ connection.connect(function(err) {
     if (err) throw err
     console.log('Connected!')
 });
+
+const promptUser = () => {
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'initialOptions',
+            message: 'What would you like to do?',
+            choices: [
+            'View All Departments', 
+            'View All Roles', 
+            'View All Employees', 
+            'Add Department', 
+            'Add Role', 
+            'Add Employee', 
+            'Update an Existing Employee'
+            ]
+        },
+    ]).then(initialOptionsData => {
+        switch(initialOptionsData.initialOptions) {
+            case 'View All Departments':
+                renderAllDepartments();
+                break;
+            
+            case 'View All Roles':
+                renderAllRoles();
+                break;
+            
+            case 'View All Employees':
+                renderAllEmployees();
+                break;
+
+            case 'Add Department':
+                renderAddedDepartment();
+                break;
+
+            case 'Add Role':
+                renderAddedRole();
+                break;
+            
+            case 'Add Employee':
+                renderAddedEmployee();
+                break;
+            
+            case 'Update an Existing Employee':
+                renderUpdatedEmployee();
+                break;
+
+        }
+
+    })
+}
+// renders all departments
+const renderAllDepartments = () => {
+    //Run query to get all departments
+    // Console.table results of #1
+    promptUser();
+}
+
+// renders all roles
+renderAllRoles()
+
+// renders all employees
+renderAllEmployees()
+
+// renders added department
+renderAddedDepartment()
+
+// renders added role
+renderAddedRole()
+
+// renders added employee
+renderAddedEmployee()
+
+// renders updated employee
+renderUpdatedEmployee()
+
 
 // Create inquirer prompts:
 // 1. Prompt for adding a department
