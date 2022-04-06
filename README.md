@@ -6,6 +6,9 @@
   - What problem does it solve? It solves the issue of having to rebuild an entire MySQL table every time a user wants to update one row or column of data.
   - What did I learn? I learned how to utilize MySQL in conjunction with Inquirer and Node.js to create an application that users can use comfortably in a terminal. 
   - What makes my project stand out? My project contains comments that make it more readable and easy to follow for other developers.
+
+  ## Challenges
+  - One of the challenges I struggled during the development of this project was running queries from the `index.js` file and rendering it based on the user's choice for the initial prompt.
   
   ## User Story
 AS A business owner
@@ -40,12 +43,13 @@ THEN I am prompted to select an employee to update and their new role and this i
   ## Table of Contents
   
   - [Description](#description)
+  - [Usage](#usage)
   - [License](#license)
-  - [Features](#features)
 
   ## Usage
 
   ![Application Preview](screenshot.png)
+  [Demonstration Video](https://youtu.be/BXdA2GWe5Fc)
 
   ## License
 
