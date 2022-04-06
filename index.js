@@ -92,7 +92,7 @@ const renderAllRoles = () => {
     // Run query to get all roles
 
     // Console.table results of #2
-
+    cTable(sql);
     // Loops back to starting prompt
     promptUser();
 } 
