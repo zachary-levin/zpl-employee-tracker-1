@@ -62,30 +62,90 @@ const promptUser = () => {
 
     })
 }
+
+promptUser();
+
 // renders all departments
 const renderAllDepartments = () => {
     //Run query to get all departments
+    const sql = `SELECT department FROM employee`;
+
+    connection.query(sql, (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.json({
+            message: 'success',
+            data: rows
+        });
+    });
     // Console.table results of #1
+    console.table (sql);
+
+    // Loops back to starting prompt
     promptUser();
 }
 
 // renders all roles
-renderAllRoles()
+const renderAllRoles = () => {
+    // Run query to get all roles
+
+    // Console.table results of #2
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 // renders all employees
-renderAllEmployees()
+const renderAllEmployees = () => {
+    // Run query to get all employees
+
+    // Console.table results of #3
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 // renders added department
-renderAddedDepartment()
+const renderAddedDepartment = () => {
+    // Run query to add(post) a department
+
+    // Console.table results of #4
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 // renders added role
-renderAddedRole()
+const renderAddedRole = () => {
+    // Run query to add(post) a role
+
+    // Console.table results of #5
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 // renders added employee
-renderAddedEmployee()
+const renderAddedEmployee = () => {
+    // Run query to get add(post) an employee
+
+    // Console.table results of #6
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 // renders updated employee
-renderUpdatedEmployee()
+const renderUpdatedEmployee = () => {
+    // Run query to update(put) an employee
+
+    // Console.table results of #7
+
+    // Loops back to starting prompt
+    promptUser();
+} 
 
 
 // Create inquirer prompts:
