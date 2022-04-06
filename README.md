@@ -1,6 +1,13 @@
-# zpl-employee-tracker-1
-
-## User Story
+# zpl-employee-tracker-1 
+  ## Description
+  
+  - What was my motivation? I wanted to create an application utilizing MySQL2, Inquirer, Node.js that tracks a company's departments, roles, and employees for organization and business purposes.
+  - Why did I build this project? I built this project to test my MySQL skills in creating a real-world, practical application.
+  - What problem does it solve? It solves the issue of having to rebuild an entire MySQL table every time a user wants to update one row or column of data.
+  - What did I learn? I learned how to utilize MySQL in conjunction with Inquirer and Node.js to create an application that users can use comfortably in a terminal. 
+  - What makes my project stand out? My project contains comments that make it more readable and easy to follow for other developers.
+  
+  ## User Story
 AS A business owner
 I WANT to be able to view and manage the departments, roles, and employees in my company
 SO THAT I can organize and plan my business
@@ -30,3 +37,23 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+  ## Table of Contents
+  
+  - [Description](#description)
+  - [License](#license)
+  - [Features](#features)
+
+  ## Usage
+
+  ![Application Preview](screenshot.png)
+
+  ## License
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] (https://opensource.org/licenses/MIT)
+
+  ---
+
+  ## Questions?
+  If you have any questions, check out my [GitHub profile](https://github.com/zachary-levin) at or email me at [zlevin706@gmail.com](mailto:zlevin706@gmail.com)
+
+

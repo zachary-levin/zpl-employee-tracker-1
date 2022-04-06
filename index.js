@@ -1,17 +1,20 @@
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const mysql = require('mysql2');
+
 const connection = mysql.createConnection({ 
     host: 'localhost',
     user: 'root',
     database: 'employee_db',
     password: 'PotBuster132!' 
 });
+// Print "Connected!" when 'node index.js' is executed in terminal
 connection.connect(function(err) {
     if (err) throw err
     console.log('Connected!')
 });
 
+// Inquirer prompts
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -63,6 +66,7 @@ const promptUser = () => {
     })
 }
 
+// Start prompt
 promptUser();
 
 // renders all departments
