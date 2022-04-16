@@ -64,7 +64,6 @@ const promptUser = () => {
 
             case 'Quit':
                 process.exit();
-
         }
 
     })
