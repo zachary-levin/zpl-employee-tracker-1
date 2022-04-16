@@ -129,8 +129,10 @@ const renderAllEmployees = () => {
 // renders added department
 const renderAddedDepartment = () => {
     // Run query to add(post) a department
+    
     //const sql = `INSERT INTO () FROM employee`;
 
+    /*
     connection.query(sql, (err, res) => {
         if (err) {
             res.status(500).json({ error: err.message });
@@ -139,6 +141,7 @@ const renderAddedDepartment = () => {
         // Console.table results of #4
         console.table(res);
     });
+    */
 
     // Loops back to starting prompt
     promptUser();
