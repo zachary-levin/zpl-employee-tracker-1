@@ -16,7 +16,7 @@ connection.connect(function(err) {
 
 // Inquirer prompts
 const promptUser = () => {
-    return inquirer.prompt([
+     inquirer.prompt([
         {
             type: 'list',
             name: 'initialOptions',
@@ -28,7 +28,8 @@ const promptUser = () => {
             'Add Department', 
             'Add Role', 
             'Add Employee', 
-            'Update an Existing Employee'
+            'Update an Existing Employee',
+            'Quit'
             ]
         },
     ]).then(initialOptionsData => {
@@ -61,6 +62,9 @@ const promptUser = () => {
                 renderUpdatedEmployee();
                 break;
 
+            case 'Quit':
+                process.exit();
+
         }
 
     })
@@ -72,20 +76,18 @@ promptUser();
 // renders all departments
 const renderAllDepartments = () => {
     //Run query to get all departments
-    const sql = `SELECT department FROM employee`;
+    const sql = `SELECT * FROM department`;
 
-    connection.query(sql, (err, rows) => {
+   connection.query(sql, (err, res) => {
         if (err) {
             res.status(500).json({ error: err.message });
             return;
         }
-        res.json({
-            message: 'success',
-            data: rows
-        });
+        console.table(res);
     });
+    
     // Console.table results of #1
-    console.table (sql);
+    
 
     // Loops back to starting prompt
     promptUser();
