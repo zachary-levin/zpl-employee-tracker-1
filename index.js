@@ -83,11 +83,9 @@ const renderAllDepartments = () => {
             res.status(500).json({ error: err.message });
             return;
         }
+        // Console.table results of #1
         console.table(res);
     });
-    
-    // Console.table results of #1
-    
 
     // Loops back to starting prompt
     promptUser();
@@ -96,9 +94,17 @@ const renderAllDepartments = () => {
 // renders all roles
 const renderAllRoles = () => {
     // Run query to get all roles
+    const sql = `SELECT * FROM role`;
 
-    // Console.table results of #2
-    cTable(sql);
+    connection.query(sql, (err, res) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        // Console.table results of #2
+        console.table(res);
+    });
+
     // Loops back to starting prompt
     promptUser();
 } 
@@ -106,8 +112,16 @@ const renderAllRoles = () => {
 // renders all employees
 const renderAllEmployees = () => {
     // Run query to get all employees
+    const sql = `SELECT * FROM employee`;
 
-    // Console.table results of #3
+    connection.query(sql, (err, res) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        // Console.table results of #3
+        console.table(res);
+    });
 
     // Loops back to starting prompt
     promptUser();
@@ -116,8 +130,16 @@ const renderAllEmployees = () => {
 // renders added department
 const renderAddedDepartment = () => {
     // Run query to add(post) a department
+    //const sql = `INSERT INTO () FROM employee`;
 
-    // Console.table results of #4
+    connection.query(sql, (err, res) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        // Console.table results of #4
+        console.table(res);
+    });
 
     // Loops back to starting prompt
     promptUser();
